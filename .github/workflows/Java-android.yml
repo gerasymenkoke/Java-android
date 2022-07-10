@@ -34,7 +34,7 @@ jobs:
               gradle build
               gradle tasks --all
               chmod +x gradlew
-              cd /home/runner/work/C-android/Java-android/initial
+              cd /home/runner/work/Java-android/Java-android/initial
               pwd
               ./gradlew run
               #gradle wrapper --gradle-version 7.4.2
