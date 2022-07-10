@@ -29,6 +29,7 @@ jobs:
               cashe: gradle
       - name: Run unit tests
         run: |
+              cd /home/runner/work/Java-android/Java-android/complete
               gradle init
               gradle wrapper
               gradle build
