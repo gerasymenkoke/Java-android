@@ -30,7 +30,7 @@ jobs:
       - name: Run unit tests
         run: |
               gradle init
-              gradle tasks
+              gradle tasks --all
               chmod +x gradlew
               ./gradlew run
               #gradle wrapper --gradle-version 7.4.2
