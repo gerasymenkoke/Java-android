@@ -31,6 +31,7 @@ jobs:
         run: |
               gradle init
               gradle wrapper
+              gradle build
               gradle tasks --all
               chmod +x gradlew
               ./gradlew run
