@@ -36,7 +36,7 @@ jobs:
               chmod +x gradlew
               cd /home/runner/work/Java-android/Java-android/initial
               pwd
-              ./gradlew run
+              gradlew run
               #gradle wrapper --gradle-version 7.4.2
               # chmod +x gradlew
               #chmod +x test
