@@ -23,5 +23,5 @@ jobs:
            ls -l
            chmod +x gradlew
            ./gradlew build
-           pwd
+           ls -l
            ./gradlew run
