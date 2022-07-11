@@ -21,6 +21,7 @@ jobs:
            cd /home/runner/work/Java-android/Java-android/complete/build/distributions/complete/bin
            chmod +x complete
            ./complete
+           cd /home/runner/work/Java-android/Java-android/complete
            pwd
            ls -l
            chmod +x gradlew
