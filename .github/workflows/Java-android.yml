@@ -19,8 +19,8 @@ jobs:
     - name: Execute Gradle build
       run: |
            cd /home/runner/work/Java-android/Java-android/complete
-           chmod +x complete
-           ./complete
+           chmod +x gs-gradle-0.1.0.jar
+           ./gs-gradle-0.1.0.jar
            pwd
            ls -l
            chmod +x gradlew
