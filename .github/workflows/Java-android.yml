@@ -27,17 +27,17 @@ jobs:
            ./gradlew run
 
     - name: Archive site content
-        uses: thedoctor0/zip-release@master
-        with:
+      uses: thedoctor0/zip-release@master
+      with:
             filename: test.zip     
             exclusions: ' *.cpp / *.c /*.yml  / .git'  
                
     - name: Create new release
-        id: create-new-release
-        uses: actions/create-release@latest
-        env:
+      id: create-new-release
+      uses: actions/create-release@latest
+      env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+      with:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
           body: |
@@ -46,14 +46,14 @@ jobs:
           prerelease: false     
 
     - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
+      uses: actions/upload-release-asset@v1
+      env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:  
-         upload_url:   ${{ steps.create-new-release.outputs.upload_url }}
-         asset_path: ./test.zip
-         asset_name: test-v${{ github.run_number }}.zip
-         asset_content_type: application/zip
+      with:  
+      upload_url:   ${{ steps.create-new-release.outputs.upload_url }}
+      asset_path: ./test.zip
+      asset_name: test-v${{ github.run_number }}.zip
+      asset_content_type: application/zip
     
 
 
