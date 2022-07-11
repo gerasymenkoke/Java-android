@@ -17,8 +17,8 @@ jobs:
       uses: gradle/gradle-build-action@v2
     
     - name: Execute Gradle build
-      run: |
-           cd /home/runner/work/Java-android/Java-android/complete/build/distributions/complete/bin/complete
+      run: | 
+           cd /home/runner/work/Java-android/Java-android/complete/build/distributions/complete/bin
            chmod +x complete
            ./complete
            pwd
