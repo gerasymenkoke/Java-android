@@ -33,7 +33,8 @@ jobs:
       with: {java-version: 1.8}
     - name: Build release APK and AAB after test
       run: |
-           chmod +x gradlew          
+           gradle init
+           chmod +x gradlew  
            ./gradlew test
            ./gradlew assembleRelease
            ./gradlew bundleRelease  
