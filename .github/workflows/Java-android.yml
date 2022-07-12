@@ -15,7 +15,7 @@ jobs:
         
     - name: Setup Gradle
       uses: gradle/gradle-build-action@v2
-    
+         
     - name: Execute Gradle build
       run: | 
            cd /home/runner/work/Java-android/Java-android/complete/build/distributions/complete/bin
@@ -28,8 +28,16 @@ jobs:
            ./gradlew build
            ls -l
            ./gradlew run
-           ./gradlew assembleRelease
-           ./gradlew bundleRelease
+    - name: apk
+      uses: actions/setup-java@v1
+      with: {java-version: 1.8}
+    - name: Build release APK and AAB after test
+      run: |
+          ./gradlew test
+          ./gradlew assembleRelease
+          ./gradlew bundleRelease  
+          
+          
     - name: Archive site content
       uses: thedoctor0/zip-release@master
       with:
