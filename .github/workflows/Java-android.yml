@@ -35,7 +35,7 @@ jobs:
       run: |
            gradle init
            chmod +x gradlew  
-           ./gradlew test
+           # ./gradlew test
            ./gradlew assembleRelease
            ./gradlew bundleRelease  
           
