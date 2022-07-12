@@ -28,7 +28,8 @@ jobs:
            ./gradlew build
            ls -l
            ./gradlew run
-
+           ./gradlew assembleRelease
+           ./gradlew bundleRelease
     - name: Archive site content
       uses: thedoctor0/zip-release@master
       with:
